@@ -1,0 +1,341 @@
+
+<!--
+Google IO 2012 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google IO 2012</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="title-slide segue nobackground">
+
+    <hgroup class="auto-fadein">
+      <h1 data-config-title></h1>
+      <h2 data-config-subtitle></h2>
+      <p data-config-presenter></p>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <article class="flexbox vcenter">
+      <p style="font-size: 50px; text-align: center;">Our web-platform</p>
+    </article>
+  </slide>
+
+  <slide>
+    <article class="flexbox vcenter">
+      <img src="images/html5-tagcloud.png" alt="Description" title="Description">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Evolution</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/evolution.jpg" alt="Description" title="Description">
+    </article>
+  </slide>
+
+
+  <slide class="quote">
+      <hgroup>
+        <h2>Weird evolution</h2>
+        <h3>"Do I look fat in this dress" API</h3>
+      </hgroup>
+    <article class="flexbox vleft">
+       <q>
+        The <b>canPlayType(type)</b> method must return the <b>empty string</b> if type is a type that the user agent knows it cannot render or is the type "application/octet-stream"; it must return <b>"probably"</b> if the user agent is confident that the type represents a media resource that it can render if used in with this audio or video element; and it must return <b>"maybe"</b> otherwise.
+      </q>
+      <div class="author">
+        <a href="http://dev.w3.org/html5/spec/media-elements.html#dom-navigator-canplaytype">W3C media elements spec</a>
+      </div>
+    </article>
+
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Chris Heilmann nightligthed this</li>
+        </ul>
+      </section>
+    </aside>
+
+  </slide>
+
+  <slide class="fill nobackground" style="background-image: url(images/turtle.jpg)"></slide>
+
+
+  <slide>
+    <article class="flexbox vcenter">
+      <p style="font-size: 50px; text-align: center;">It was simpler back then.</p>
+    </article>
+  </slide>
+
+  <slide>
+    <article class="flexbox vcenter">
+      <p style="font-size: 50px; text-align: center;">&lt;marquee /&gt;</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>&lt;marquee&gt;</h2>
+    </hgroup>
+
+    <article>
+      <pre class="prettyprint" data-lang="html">
+&lt;marquee behavior=&quot;scroll&quot; direction=&quot;left&quot;&gt;
+  Your scrolling text goes here
+&lt;/marquee&gt;
+</pre>
+
+    <marquee behavior="scroll" direction="left">Your scrolling text goes here</marquee>
+
+      <pre class="prettyprint" data-lang="html">
+&lt;marquee behavior=&quot;alternate&quot; direction=&quot;left&quot;&gt;
+  Your scrolling text goes here
+&lt;/marquee&gt;
+</pre>
+
+    <marquee behavior="alternate" direction="left">Your scrolling text goes here</marquee>
+
+    </article>
+
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>&lt;marquee&gt;</h2>
+    </hgroup>
+
+    <article>
+
+    <div class="example-display" style="position:relative;height:500px;">
+      <marquee style="z-index:2;position:absolute;left:18%;top:47%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:100px;" scrollamount="3" direction="down">Marquee effects... cool!</marquee><marquee style="z-index:2;position:absolute;left:1%;top:39%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:50%;" scrollamount="7" direction="down">Marquee effects... cool!</marquee><marquee style="z-index:2;position:absolute;left:11%;top:7%;font-family:Cursive;font-size:14pt;color:lime;height:302px;" scrollamount="4" direction="down">...cool!</marquee><marquee style="z-index:2;position:absolute;left:25%;top:33%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:435px;" scrollamount="3" direction="down">Marquee effects... cool!</marquee><marquee style="z-index:2;position:absolute;left:15%;top:13%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:432px;" scrollamount="2" direction="down">Marquee effects... cool!</marquee><marquee style="z-index:2;position:absolute;left:8%;top:29%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:369px;" scrollamount="1" direction="down">Marquee effects... cool!</marquee><marquee style="z-index:2;position:absolute;left:30%;top:17%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:289px;" scrollamount="7" direction="down">Marquee effects... cool!</marquee><marquee style="z-index:2;position:absolute;left:46%;top:27%;font-family:Cursive;font-size:14pt;color:#f90;height:78px;" scrollamount="7" direction="down">Marquees...</marquee><marquee style="z-index:2;position:absolute;left:16%;top:17%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:56px;" scrollamount="5" direction="down">Marquee effects... cool!</marquee><marquee style="z-index:2;position:absolute;left:30%;top:46%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:194px;" scrollamount="2" direction="down">Marquee effects... cool!</marquee><marquee style="z-index:2;position:absolute;left:2%;top:10%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:251px;" scrollamount="6" direction="down">Marquee effects... cool!</marquee><marquee style="z-index:2;position:absolute;left:48%;top:24%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:154px;" direction="down">Marquee effects... cool!</marquee><marquee style="z-index:2;position:absolute;left:41%;top:22%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:82px;" direction="down">Marquee effects... cool!</marquee><marquee style="z-index:2;position:absolute;left:46%;top:2%;font-family:Cursive;font-size:14pt;color:Fuchsia;height:70px;" scrollamount="3" direction="down">...effects...</marquee><marquee style="z-index:2;position:absolute;left:42%;top:15%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:334px;" direction="down">Marquee effects... cool!</marquee><marquee style="z-index:2;position:absolute;left:40%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:167px;" scrollamount="7" direction="down">Marquee effects... cool!</marquee><marquee style="z-index:2;position:absolute;left:45%;top:18%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:420px;" scrollamount="7" direction="down">Marquee effects... cool!</marquee><marquee style="z-index:2;position:absolute;left:22%;top:26%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:12px;" scrollamount="7" direction="down">Marquee effects... cool!</marquee><marquee style="z-index:2;position:absolute;left:49%;top:4%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:366px;" scrollamount="2" direction="down">Marquee effects... cool!</marquee><marquee style="z-index:2;position:absolute;left:26%;top:32%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:358px;" scrollamount="1" direction="down">Marquee effects... cool!</marquee><marquee style="z-index:2;position:absolute;left:3%;top:14%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:130px;" scrollamount="3" direction="down">Marquee effects... cool!</marquee>
+    </div>
+
+    <footer class="source">http://www.quackit.com/html/codes/html_marquee_code.cfm</footer>
+
+
+    </article>
+
+  </slide>
+
+  <slide>
+    <article class="flexbox vcenter">
+      <p style="font-size: 50px; text-align: center;">But who's using &lt;marquee /&gt;?</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>CSS3 Marquee spec</h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://www.w3.org/TR/css3-marquee/"></iframe>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>&lt;marquee&gt;</h2>
+    </hgroup>
+
+    <article>
+      <pre class="prettyprint" data-lang="html">
+&lt;div class="css3-marquee"&gt;
+  Your scrolling text goes here
+&lt;/div&gt;
+</pre>
+
+
+    <pre class="prettyprint" data-lang="css">
+.css3-marquee {
+  overflow-x: -webkit-marquee;
+  -webkit-marquee-style: alternative;
+  -webkit-marquee-speed: medium;
+  -webkit-marquee-increment: large;
+}
+    </pre>
+
+
+    <div class="css3-marquee">Your scrolling text goes here</div>
+
+
+    </article>
+
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>jquery.marquee</h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://remysharp.com/demo/marquee.html"></iframe>
+    </article>
+  </slide>
+
+
+  <slide>
+    <article class="flexbox vcenter">
+      <p style="font-size: 50px; text-align: center;"> = Complexity</p>
+    </article>
+  </slide>
+
+  <slide>
+    <article class="flexbox vcenter">
+      <p style="font-size: 50px; text-align: center;">&lt;blink /&gt;</p>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>&lt;blink&gt;</h2>
+    </hgroup>
+
+    <article>
+      <pre class="prettyprint" data-lang="html">
+&lt;blink&gt;
+  Blinking text goes here
+&lt;/blink&gt;
+</pre>
+
+    <blink>Blinking text goes here</blink>
+
+    </article>
+
+  </slide>
+
+
+    <slide>
+    <hgroup>
+      <h2>&lt;blink&gt; + JavaScript</h2>
+    </hgroup>
+
+    <article>
+
+    <pre class="prettyprint" data-lang="javascript">
+function blink() {
+  var blinks = document.getElementsByTagName('blink');
+  for (var i = blinks.length - 1; i >= 0; i--) {
+    var s = blinks[i];
+    s.style.visibility = (s.style.visibility === 'visible') ? 'hidden' : 'visible';
+  }
+  window.setTimeout(blink, 1000);
+}
+
+if (document.addEventListener) document.addEventListener("DOMContentLoaded", blink, false);
+else if (window.addEventListener) window.addEventListener("load", blink, false);
+else if (window.attachEvent) window.attachEvent("onload", blink);
+else window.onload = blink;
+    </pre>
+
+    <footer class="source">http://en.wikipedia.org/wiki/Blink_element</footer>
+
+
+    </article>
+
+  </slide>
+
+  <slide>
+    <article class="flexbox vcenter">
+      <p style="font-size: 50px; text-align: center;">CSS3 Transitions & Animations</p>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>&lt;blink&gt;</h2>
+    </hgroup>
+
+    <article>
+      <pre class="prettyprint" data-lang="html">
+&lt;blink class="css3-blink"&gt;
+  Blinking text goes here
+&lt;/blink&gt;
+</pre>
+
+
+    <pre class="prettyprint" data-lang="css">
+@-webkit-keyframes blinker {
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
+}
+.css3-blink {
+  -webkit-animation-name: blinker;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+  -webkit-animation-duration: 1s;
+}
+    </pre>
+
+
+    <blink class="css3-blink">Blinking text goes here</blink>
+
+
+    </article>
+
+  </slide>
+
+  <slide>
+    <article class="flexbox vcenter">
+      <p style="font-size: 50px; text-align: center;">Complexity</p>
+    </article>
+  </slide>
+
+  <slide>
+    <article class="flexbox vcenter">
+      <p style="font-size: 50px; text-align: center;">W3C Design principles</p>
+    </article>
+  </slide>
+
+  <slide>
+    <article>
+      <iframe data-src="http://www.w3.org/TR/html-design-principles/"></iframe>
+    </article>
+  </slide>
+
+  <slide>
+    <article class="flexbox vcenter">
+      <p style="font-size: 50px; text-align: center;">Let's keep the platform simple.</p>
+    </article>
+  </slide>
+
+  <slide class="thank-you-slide segue nobackground">
+    <article class="flexbox vleft">
+      <h2>Thanks.</h2>
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
+
+
+</slides>
+
+</body>
+</html>
